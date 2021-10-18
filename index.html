@@ -14,8 +14,8 @@
   <meta property="og:type" content="website" />
   <meta property="og:image" content="http://danielthrasher.com/logo.png" />
   <meta property="og:image:type" content="image/png" />
-  <meta property="og:image:width" content="500" />
-  <meta property="og:image:height" content="500" />
+  <meta property="og:image:width" content="600" />
+  <meta property="og:image:height" content="600" />
   <meta name="twitter:title" content="Daniel Thrasher: Laugh or Die" />
   <meta name="twitter:description"
     content="Daniel Thrasher: Laugh or Die, Wednesday, December 1st, Palace Theatre, Los Angeles, CA" />
@@ -61,6 +61,7 @@
       -webkit-animation: fadein 2s;
       /* Safari and Chrome */
       -o-animation: fadein 2s;
+      margin-top: -535px;
     }
 
     .logo {
@@ -71,7 +72,23 @@
       width: 100%;
       max-width: 800px;
       height: auto;
-      margin-bottom: -270px;
+      /* margin-bottom: -270px; */
+      position: relative;
+      top: 320px;
+    }
+
+    .daniel {
+      display: flex;
+      justify-content: center;
+    }
+
+    .daniel img {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      margin: 0 auto;
+      position: relative;
+      top: 90px;
     }
 
     .additional-details {
@@ -278,21 +295,40 @@
     @media only screen and (max-width: 1200px) {
       .logo img {
         position: relative;
-        top: 150px;
+        top: 370px;
       }
 
-      .btn-wrapper {
+      .daniel img {
+        top: 120px;
+      }
+
+      /* .btn-wrapper {
         top: 200px;
-      }
+      } */
 
-      .additional-details {
+      /* .additional-details {
         margin-top: 300px;
-      }
+      } */
     }
+
+
+    @media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) { 
+   .container {
+        margin-top: -512px;
+      }
+}
+
+  
+    
+
 
     @media only screen and (max-width: 768px) {
       .container {
         height: 100%;
+        margin-top: -520px;
       }
 
       p {
@@ -307,16 +343,26 @@
         width: 100px;
       }
 
-      .btn-wrapper {
-        top: 270px;
-      }
-
-      .show-info {
-        margin-top: 10px;
-      }
-
       .logo img {
-        margin-top: 0px;
+        top: 340px;
+      }
+    }
+
+     @media only screen and (max-width: 660px) {
+      .daniel img {
+        top: 160px;
+      }
+
+      .container {
+        margin-top: -460px;
+      }
+    }
+
+
+    @media only screen and (max-width: 540px) {
+
+      .container {
+        margin-top: -415px;
       }
     }
 
@@ -327,7 +373,11 @@
 
       .logo img {
         margin-top: 0px;
-        top: 210px;
+      }
+
+      .daniel img {
+        top: 220px;
+        max-width: 300px;
       }
 
       p {
@@ -341,7 +391,7 @@
       }
 
       .btn-wrapper {
-        top: 400px;
+        top: 200px;
       }
 
       .custom-btn {
@@ -366,10 +416,6 @@
         width: 100px;
         margin-top: 150px;
       }
-
-      
-
-   
     }
 
 
@@ -390,10 +436,13 @@
 <body>
   <div class="container">
     <div class="logo">
-      <img src="logo.png" alt="">
+      <img src="logo.png" alt="Daniel Thrasher">
+    </div>
+    <div class="daniel">
+      <img src="daniel.png" alt="Daniel Thrasher">
     </div>
     <div class="btn-wrapper">
-      <a class="ticket-ref" href="https://www.ticketmaster.com/event/09005B5285B1407E" target="_blank" rel="noopener noreferrer">  
+      <a class="ticket-ref" href="https://www.ticketmaster.com/event/09005B5285B1407E" target="_blank" rel="noopener noreferrer"> 
         <button class="custom-btn btn-12"><span>Tickets</span><span>Tickets</span></button>
       </a>
       <div class="show-info">
