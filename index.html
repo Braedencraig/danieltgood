@@ -163,6 +163,32 @@
       perspective: 230px;
     }
 
+    .vip {
+      margin-top: 20px;
+    }
+
+    .btn-11 {
+      color: #0bf4f3;
+      position: relative;
+      right: 50px;
+      bottom: 50px;
+      border: none;
+      width: 320px;
+      height: 60px;
+      line-height: 40px;
+      -webkit-perspective: 230px;
+      perspective: 230px;
+    }
+
+    h3 {
+      font-size: 24px;
+      color: #0bf4f3;
+      padding: 5px 0;
+      text-transform: uppercase;
+      font-family: 'Audiowide', cursive;
+      margin: 15px 0;
+    }
+
     p {
       font-size: 24px;
       color: #0bf4f3;
@@ -170,6 +196,19 @@
       text-transform: uppercase;
       font-family: 'Audiowide', cursive;
       margin: 0;
+    }
+
+    .one, .two {
+      padding: 10px;
+      width: 45%;
+      margin: 0 auto;
+      background: purple;
+      margin-bottom: 15px;
+      border: 2px solid #0bf4f3;
+    }
+
+    .one p, .two p {
+      font-size: 18px;
     }
 
     .btn-12 span {
@@ -216,6 +255,58 @@
     }
 
     .btn-12:hover span:nth-child(2) {
+      background: transparent;
+      color: transparent;
+      box-shadow: 0 0 5px #0bf4f3, 0 0 5px #0bf4f3 inset;
+      -webkit-transform: rotateX(-90deg);
+      -moz-transform: rotateX(-90deg);
+      transform: rotateX(-90deg);
+    }
+
+    .btn-11 span {
+      display: block;
+      background: purple;
+      position: absolute;
+      width: 320px;
+      height: 60px;
+      border: 1px solid #0bf4f3;
+      box-shadow: 0 0 5px #0bf4f3, 0 0 5px #0bf4f3 inset;
+      margin: 0;
+      text-align: center;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      -webkit-transition: all .3s;
+      transition: all .3s;
+      padding-top: 9px;
+    }
+
+    .btn-11 span:nth-child(1) {
+      box-shadow: 0 0 5px #0bf4f3, 0 0 5px #0bf4f3 inset;
+      -webkit-transform: rotateX(90deg);
+      -moz-transform: rotateX(90deg);
+      transform: rotateX(90deg);
+      -webkit-transform-origin: 50% 50% -28px;
+      -moz-transform-origin: 50% 50% -28px;
+      transform-origin: 50% 50% -28px;
+    }
+
+    .btn-11 span:nth-child(2) {
+      -webkit-transform: rotateX(0deg);
+      -moz-transform: rotateX(0deg);
+      transform: rotateX(0deg);
+      -webkit-transform-origin: 50% 50% -30px;
+      -moz-transform-origin: 50% 50% -30px;
+      transform-origin: 50% 50% -30px;
+    }
+
+    .btn-11:hover span:nth-child(1) {
+      -webkit-transform: rotateX(0deg);
+      -moz-transform: rotateX(0deg);
+      transform: rotateX(0deg);
+    }
+
+    .btn-11:hover span:nth-child(2) {
       background: transparent;
       color: transparent;
       box-shadow: 0 0 5px #0bf4f3, 0 0 5px #0bf4f3 inset;
@@ -302,6 +393,10 @@
         top: 120px;
       }
 
+      .one, .two {
+        width: 65%;
+      }
+
       /* .btn-wrapper {
         top: 200px;
       } */
@@ -345,6 +440,10 @@ and (orientation : portrait) {
 
       .logo img {
         top: 340px;
+      }
+
+      .one, .two {
+        width: 85%;
       }
     }
 
@@ -430,6 +529,12 @@ and (orientation : portrait) {
         height: 100%;
       }   
     }
+
+    #vipInfo {
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility 0s, opacity 0.5s linear;
+    }
   </style>
 </head>
 
@@ -464,13 +569,47 @@ and (orientation : portrait) {
           <i class="fab fa-twitter fa-2x"></i>
         </a>
       </div>
-      
+      <div class="vip">
+        <a class="ticket-ref" onclick="vipFunc()"> 
+          <button class="custom-btn btn-11"><span>VIP Experience</span><span>VIP Experience</span></button>
+        </a>
+        <div id="vipInfo">
+          <div class="one">
+            <h3>VIP 1 Includes:</h3>
+            <p>- One general admission ticket</p>
+            <p>- VIP early entry into the venue</p>
+            <p>- Early Access to merchandise line before show doors</p>
+            <p>- Exclusive Pre-Show Trivia Experience (with a potential in-show involvement for winners!)</p>
+            <p>- Exclusive VIP merchandise bundle</p>
+            <p>- Very limited availability</p>
+            <p>- Dedicated email to answer any questions</p>
+            <p></p>
+          </div>
+          <div class="two">
+            <h3>VIP 2 Includes:</h3>
+            <p>- One general admission ticket</p>
+            <p>- VIP early entry into the venue</p>
+            <p>- Early Access to merchandise line before show doors</p>
+            <p>- Exclusive VIP merchandise bundle</p>
+            <p>- Very limited availability</p>
+            <p>- Dedicated email to answer any questions</p>
+            <p></p>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="additional-details">
       <a href="https://www.realgoodtouring.com/" target="_blank" class="rgt"><img src="rgt.png"
           alt="Real Good Touring" /></a>
     </div>
   </div>
+  <script>
+    function vipFunc() {
+      const info = document.getElementById("vipInfo");
+      info.style.opacity = 1;
+      info.style.visibility = "visible";
+    }
+  </script>
 </body>
 
 </html>
